@@ -1,4 +1,6 @@
 
+/test_README.md
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
