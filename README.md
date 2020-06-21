@@ -32,6 +32,5 @@ npm run dev
 ### Travailler sur le projet
 
 ```
-_Compiler les assets en temps réel :_
-* npm run watch
+npm run watch
 ```
