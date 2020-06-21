@@ -5,6 +5,7 @@
         "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "5.1.*",
@@ -29,6 +30,7 @@
         "symfony/twig-pack": "*",
         "symfony/validator": "5.1.*",
         "symfony/web-link": "5.1.*",
+        "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "5.1.*"
     },
     "require-dev": {
@@ -67,7 +69,9 @@
         "prepare": [
             "php bin/console doctrine:database:drop --if-exists -f",
             "php bin/console doctrine:database:create",
-            "php bin/console doctrine:schema:valid"
+            "php bin/console doctrine:schema:update -f",
+            "php bin/console doctrine:schema:valid -n",
+            "php bin/console doctrine:fixtures:load -n"
         ],
         "auto-scripts": {
             "cache:clear": "symfony-cmd",

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Formation - Create' %}
+
+{% block body %}
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-8 col-lg-6 col-xl-4">
+			{% include "back_office/formation/_form.html.twig" with { form: form, title: 'Nouvelle formation', action: 'Créer' } %}
+			{# {{ include('game/_scratch.html.twig', {'game': game, 'form': form}, with_context = false) }} #}
+		</div>
+	</div>
+{% endblock %}
