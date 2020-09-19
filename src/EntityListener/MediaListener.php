@@ -43,7 +43,6 @@ class MediaListener
     public function upload(Media $media): void
     {
         if ($media->getFile() instanceof UploadedFile) {
-            dump('add', $media);
             $filename = Uuid::v4() . '.' . $media->getFile()->getClientOriginalExtension();
             $media->getFile()->move($this->uploadAbsoluteDir, $filename);
             $media->setPath($this->uploadDir . '/' . $filename);
